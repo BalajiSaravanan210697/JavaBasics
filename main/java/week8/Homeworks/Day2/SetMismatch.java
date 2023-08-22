@@ -1,5 +1,7 @@
 package week8.Homeworks.Day2;
 
+import java.util.Arrays;
+
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -62,6 +64,7 @@ public class SetMismatch {
 	    public int[] findErrorNums(int[] nums){
 	    int count=0;
 		int[] output = new int[2];
+		Arrays.sort(nums);
 		for(int i=0;i<nums.length;i++){
 		if(nums[i]<0)
 		{
@@ -74,6 +77,7 @@ public class SetMismatch {
 		else{
 		output[0] = nums[i];
 		output[1] = count;
+		break;
 		}
 		}
 		return output;

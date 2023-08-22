@@ -28,7 +28,22 @@ public class PlaceFlowers {
 		 * No
 		 * 5. Derive Pseudo code in paper (for the best chosen approach) Use ChatGPT to get approach or hints not the entire solution or complete code. USE THIS ONLY
 		 *  WHEN YOU ARE UNABLE TO GET THE APPROACH FOR A GIVEN PROBLEM AFTER APPLYING ALL WHAT YOU HAVE LEARNT AND PRACTICED + Remember how your brain is converting the test data input to its expected output!
-		 * 
+		 * pesudocode :
+
+          1.Get the integer array int[]  flowerbed and int n value   
+          2.Iterate the flowerbed array using for loop  
+          3. if the value of flowerbed[i] == 0 then check      
+          4. if the value of flowerbed[i-1] && flowerbed[i+1] == 0  
+          5  true then decrement the value of n-- 6
+          6. return n==0;  
+          
+          pesudocode
+
+         1.Get the int[] and int value
+         2.for loop to iterate the int[] values till the length of array  
+         3.if the flowerbed[i]==0 && flowerbed[i+1]==0
+           Decrement the n value 
+         4.Reset the i value from i=i+1    
 		 * 6.Dry run the pseudo code with all test data from step #2
 		 * 
 		 * 7.Write the code on notepad

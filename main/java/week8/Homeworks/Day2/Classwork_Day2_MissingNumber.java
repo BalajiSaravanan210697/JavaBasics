@@ -57,7 +57,7 @@ public class Classwork_Day2_MissingNumber {
 	}
 	@Test
 	public void Invalid() {
-		int actual =missingNumber(new int[] {2,1,3});
+		int actual = missingNumber(new int[] {2,1,3});
 		Assert.assertEquals(0, actual);
 	}
 	

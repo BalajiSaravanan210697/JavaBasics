@@ -63,6 +63,7 @@ public class SetMismatch {
 	}
 	    public int[] findErrorNums(int[] nums){
 	    int count=0;
+	    int missingnumber = nums.length;
 		int[] output = new int[2];
 		Arrays.sort(nums);
 		for(int i=0;i<nums.length;i++){
@@ -76,9 +77,16 @@ public class SetMismatch {
 		}
 		else{
 		output[0] = nums[i];
-		output[1] = count;
 		break;
 		}
+		}
+		for(int i=0;i<nums.length;i--) {
+			if(nums[i]-missingnumber==0) {
+				missingnumber--;
+			}else {
+				 output[1]=missingnumber;
+				break;
+			}
 		}
 		return output;
 		}

@@ -58,7 +58,10 @@ public class SummaryRanges {
 		List<String> actual =summaryRanges(new int[] {1});
 		
 	}
-	 public void summaryRanges(int[] nums){
+	 public List<String> summaryRanges(int[] nums){
+		 List<String> list = new ArrayList<String>();
+		 
+		return list;
 		 
 		 } 
 }

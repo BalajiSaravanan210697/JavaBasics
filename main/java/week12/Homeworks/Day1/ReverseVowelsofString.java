@@ -72,7 +72,7 @@ public String vowelsString(String s) {
 			Left++;
 		}
 	}
-	
+
 	return changedarray.toString();
 }
 }

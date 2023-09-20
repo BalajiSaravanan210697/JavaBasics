@@ -38,43 +38,45 @@ public class FlippinganImage {
  * input = [1,1,0] output = [1,0,0]
  */
 	@Test
-public void ValidTestCase() {
-		Assert.assertArrayEquals(new int[] {1,0,0}, flipArray(new int[] {1,1,0}));
-	
-}
-public int[] flipArray(int[] nums) {
-	int left = 0, right = nums.length - 1, temp = 0;
-	while (left < right) {
-		temp = nums[left];
-		nums[left] = nums[right];
-		nums[right] = temp;
-		if(nums[left]==0||nums[right]==0) {
-			nums[left]=1;
-			nums[right]=1;
-		}else {
-			nums[left]=0;
-			nums[right]=0;
-		}
-		left++;
-		right--;	
-	}
-	System.out.println(nums);
-	return nums;
+	public void ValidTestCase() {
+		Assert.assertArrayEquals(new int[] { 1, 0, 0 }, flipArray(new int[] { 1, 1, 0 }));
 
-}
+	}
+
+	public int[] flipArray(int[] nums) {
+		int left = 0, right = nums.length - 1, temp = 0;
+		while (left < right) {
+			temp = nums[left];
+			nums[left] = nums[right];
+			nums[right] = temp;
+			if (nums[left] == 0 || nums[right] == 0) {
+				nums[left] = 1;
+				nums[right] = 1;
+			} else {
+				nums[left] = 0;
+				nums[right] = 0;
+			}
+			left++;
+			right--;
+		}
+		System.out.println(nums);
+		return nums;
+
+	}
 
 	@Test
 	public void Validtestcase() {
-		flipAndInvertImage(new int[][] {{1,0,1},{1,1,1}});
+		flipAndInvertImage(new int[][] { { 1, 0, 1 }, { 1, 1, 1 } });
 	}
-	
-	public int[][] flipAndInvertImage(int[][] image){
-		
+
+	public int[][] flipAndInvertImage(int[][] image) {
+
 		for (int i = 0; i < image.length; i++) {
 			for (int j = 0; j <= image.length; j++) {
-			System.out.println(image[i][j]);	
+				System.out.println(image[i][j]);
 			}
-			
-		} return image;
+
+		}
+		return image;
 	}
 }

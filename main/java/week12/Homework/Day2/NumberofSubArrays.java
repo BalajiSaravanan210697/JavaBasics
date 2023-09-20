@@ -44,34 +44,46 @@ public class NumberofSubArrays {
 	 * 
 	 * 11. Check for any gaps of code optimization (if not optimized already in Step #9)
 	 */
-	@Test
-	public void ValidTestCase() {
-		Assert.assertEquals(3, numOfSubarraysforloop(new int[] {2,3,4,5,1},2,3));
+@Test
+public void ValidTestCase() {
+	Assert.assertEquals(3, numOfSubarraysforloop(new int[] { 2, 3, 4, 5, 1 }, 2, 3));
+}
+
+@Test
+public void ValidTestCase1() {
+	Assert.assertEquals(3, numOfSubarraysforloop(new int[] { 2, 2, 2, 2, 5, 5, 5, 8 }, 3, 4));
+}
+
+public int numOfSubarrays(int[] arr, int k, int threshold) {
+	int pointer = 0, count = 0, sum = 0;
+	while (pointer < k)
+		sum += arr[pointer++];
+	if (sum / k >= threshold) {
+		count++;
 	}
-	@Test
-	public void ValidTestCase1() {
-		Assert.assertEquals(3, numOfSubarraysforloop(new int[] {2,2,2,2,5,5,5,8},3,4));
-	}
-	
-	public int numOfSubarrays(int[] arr, int k, int threshold) {
-		int pointer=0,count=0,sum=0;
-		while(pointer<k)
-			sum+=arr[pointer++];
-		    if (sum/k>=threshold) {count++;}
-		while(pointer<arr.length) {
-			sum+=arr[pointer]-arr[pointer-k];
-			if(sum/k>=threshold) {count++;}
+	while (pointer < arr.length) {
+		sum += arr[pointer] - arr[pointer - k];
+		if (sum / k >= threshold) {
+			count++;
 		}
-		return count;
 	}
-	public int numOfSubarraysforloop(int[] arr, int k, int threshold) {
-		int pointer,count=0,sum=0;
-		for(pointer=0;pointer<k;pointer++) {
-			sum+=arr[pointer];}
-		    if (sum/k>=threshold) {count++;}
-		    for(pointer=k;pointer<arr.length;pointer++) {
-		    sum+=arr[pointer]-arr[pointer-k];
-			if(sum/k>=threshold) {count++;}}
-		return count;
+	return count;
+}
+
+public int numOfSubarraysforloop(int[] arr, int k, int threshold) {
+	int pointer, count = 0, sum = 0;
+	for (pointer = 0; pointer < k; pointer++) {
+		sum += arr[pointer];
 	}
+	if (sum / k >= threshold) {
+		count++;
+	}
+	for (pointer = k; pointer < arr.length; pointer++) {
+		sum += arr[pointer] - arr[pointer - k];
+		if (sum / k >= threshold) {
+			count++;
+		}
+	}
+	return count;
+}
 }

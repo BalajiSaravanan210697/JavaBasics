@@ -63,7 +63,7 @@ public int[] interSection(int[] nums1,int[] nums2){
 		  }
 		  }
 		  }
-		  int[] output =new int[set.size()];
+		  int[] output = new int[set.size()];
 		 for (int i : output) {
 			
 		} return output;

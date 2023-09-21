@@ -42,37 +42,38 @@ public class ReverseVowelsofString {
 	 */
 @Test
 public void Validtest() {
+	Assert.assertEquals("holle", vowelsString("hello"));
+}
+@Test
+public void Validtest1() {
 	Assert.assertEquals("leotcede", vowelsString("leetcode"));
 }
-
-public boolean isVowel(char character) {
-	if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u'
-			|| character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U') {
-		return true;
-
-	}
-	return false;
-
+@Test
+public void Validtest2() {
+	Assert.assertEquals("tastleef", vowelsString("testleaf"));
 }
-
+public boolean isVowel(char c) {
+	return c == 'a'||c == 'e'||c == 'i'||c == 'o'||c == 'u'||c == 'A'||c == 'E'||c == 'I'||c == 'O'||c == 'U';
+}
 public String vowelsString(String s) {
-	int Left, Right = s.length() - 1;
+	int left=0, Right = s.length() - 1;
 	char[] changedarray = s.toCharArray();
 	char temp = ' ';
-	for (Left = 0; Left < Right; Left++) {
-		if (isVowel(changedarray[Left]) && isVowel(changedarray[Right])) {
-			temp = changedarray[Left];
-			changedarray[Left] = changedarray[Right];
+	while (left < Right) {
+		if (isVowel(changedarray[left])&&isVowel(changedarray[Right])) {
+			temp = changedarray[left];
+			changedarray[left] = changedarray[Right];
 			changedarray[Right] = temp;
+			Right--;
+			left++;
 		}
-		if (isVowel(changedarray[Left]) && !(isVowel(changedarray[Right]))) {
-			Right++;
+		if (!isVowel(changedarray[Right])) {
+			Right--;
 		}
-		if (!(isVowel(changedarray[Left])) && isVowel(changedarray[Right])) {
-			Left++;
+		if (!isVowel(changedarray[left])) {
+			left++;
 		}
 	}
-
-	return changedarray.toString();
+	return new String(changedarray);
 }
 }

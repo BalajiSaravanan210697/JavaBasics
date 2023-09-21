@@ -1,5 +1,6 @@
 package week12.Homeworks.Day1;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 public class SubstringofSizeThree {
@@ -41,19 +42,29 @@ public class SubstringofSizeThree {
 	 */
 @Test
 public void validTestcase() {
-	countGoodSubstrings("xyzzaz");
+	Assert.assertEquals(1, countGoodSubstrings("xyzzaz"));
+}
+
+@Test
+public void validTestcase1() {
+	Assert.assertEquals(4, countGoodSubstrings("aababcabc"));
+}
+
+@Test
+public void validTestcase2() {
+	Assert.assertEquals(3, countGoodSubstrings("xyyzakbbz"));
 }
 
 public boolean isDuplicate(String str) {
 	int left = 0, right = left + 1;
+	if (str.charAt(1) == str.charAt(2)) {
+		return false;
+	}
 	while (left < right && right < str.length()) {
 		if (str.charAt(left) == str.charAt(right)) {
-			return false;		
-		}
-		else if(str.charAt(left) == str.charAt(right++)){
 			return false;
-		}else {
-			left++;
+		} else {
+			right++;
 		}
 	}
 
@@ -63,7 +74,7 @@ public boolean isDuplicate(String str) {
 public int countGoodSubstrings(String s) {
 	String substring = "";
 	int k = 3, count = 0, pointer;
-	for (pointer = 0; pointer <= s.length() - k; pointer++) {
+	for (pointer = 0; k <= s.length(); pointer++) {
 		substring = s.substring(pointer, k);
 		k++;
 		if (isDuplicate(substring) == true) {

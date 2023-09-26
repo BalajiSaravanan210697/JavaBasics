@@ -38,4 +38,30 @@ public class ContigiousSubArray {
 	 * 
 	 * 11. Check for any gaps of code optimization (if not optimized already in Step #9)
 	 */
+	
+public int maxSubArray(int[] nums) {
+	// Initialize the integer pointer = 0 and maximum = 0 and currentmaximum = 0 sum
+	// = 0
+	int pointer = 0, maximun = 0, currentmaximum = 0, sum = 0, currentsum = 0;
+	// while loop to iterate till the pointer reaches the array length
+	while (pointer < nums.length) {
+		// add the sum values of the existing value for currentsum
+		currentsum = sum + nums[pointer];
+		sum = currentsum;
+		// if the sum value greater than 0 than add into currentmaximum
+		if (sum > 0) {
+			currentmaximum = currentmaximum + sum;
+		}
+		// if the sum value is less than 0 than reset the currentsum to zero
+		if (sum < 0) {
+			currentmaximum = 0;
+		}
+		// check the maximum between current maximum and maxmium value
+		maximun = Math.max(currentmaximum, maximun);
+		pointer++;
+
+	}
+	// return maximum
+	return maximun;
+}
 }

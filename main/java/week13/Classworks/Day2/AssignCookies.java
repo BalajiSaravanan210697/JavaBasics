@@ -17,10 +17,11 @@ public class AssignCookies {
  * else right pointer
  * return count
  * */
-	@Test
-	public void validTestcase() {
-		Assert.assertEquals(1, findContentChildren(new int[] {1,2,3},new int[] {3}));
-	}
+@Test
+public void validTestcase() {
+	Assert.assertEquals(1, findContentChildren(new int[] { 1, 2, 3 }, new int[] { 3 }));
+}
+
 public int findContentChildren(int[] g, int[] s) {
 	// Initialize the pointer left = 0 and right = 0 and count = 0
 	int left = 0, right = 0, count = 0;

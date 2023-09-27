@@ -76,7 +76,7 @@ public int[] sortArraybyParityCheck(int[] nums) {
 			Right--;
 		}
 	}
-	System.out.println(nums);
+	
 	return nums;
 }
 

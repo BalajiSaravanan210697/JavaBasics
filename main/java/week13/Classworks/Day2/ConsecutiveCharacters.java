@@ -17,8 +17,6 @@ public class ConsecutiveCharacters {
 	 *  WHEN YOU ARE UNABLE TO GET THE APPROACH FOR A GIVEN PROBLEM AFTER APPLYING ALL WHAT YOU HAVE LEARNT AND PRACTICED + Remember how your brain is converting the test data input to its expected output!
 	 * 
 	 * 6.Dry run the pseudo code with all test data from step #2
-    
-     
                
      * 7.Write the code on notepad
 	 * 

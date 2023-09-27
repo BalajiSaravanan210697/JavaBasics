@@ -81,7 +81,6 @@ public int countGoodSubstrings(String s) {
 			count++;
 		}
 	}
-	System.out.println(count);
 	return count;
 }
 }

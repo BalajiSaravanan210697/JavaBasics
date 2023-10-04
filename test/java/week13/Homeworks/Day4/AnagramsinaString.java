@@ -55,6 +55,8 @@ public void ValidTestcase1() {
 	Assert.assertEquals(new int[] { 0, 6 }, findAnagrams("abba", "ab"));
 }
 
+
+
 public List<Integer> findAnagrams(String s, String p) {
 // Initialize the pointer left to zero and right equals to length of the p String  left = 0 right = 3
 	int left = 0, right = p.length(), valueofalpahabets = 0, valueofalpahabetspstring = 0;
@@ -62,6 +64,7 @@ public List<Integer> findAnagrams(String s, String p) {
 	List<Integer> output = new ArrayList<Integer>();
 // Initialize the String substring to store the respective string to compare substring = " "
 	String substring = "";
+	
 // while loop to iterate till left value less than or equal to s length minus p length // 0<=10-3 --> 7
 	while (left <= s.length() - p.length()) {
 		valueofalpahabets = 0;

@@ -42,13 +42,13 @@ public class SelfDividingNumbers {
 	}
 
 	public boolean isSelfDividend(int num) {
-		int remainder = 0, n = num;
-		while (n != 0) {
-			remainder = n % 10;
+		int remainder = 0, number = num;
+		while (number>0) {
+			remainder = number % 10;
 			if (remainder == 0 || num % remainder != 0) {
 				return false;
 			}
-			n = n / 10;
+			number = number / 10;
 		}
 		return true;
 	}

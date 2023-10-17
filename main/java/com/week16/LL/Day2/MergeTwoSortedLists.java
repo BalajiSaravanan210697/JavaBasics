@@ -19,8 +19,8 @@ public class MergeTwoSortedLists {
 	 *  WHEN YOU ARE UNABLE TO GET THE APPROACH FOR A GIVEN PROBLEM AFTER APPLYING ALL WHAT YOU HAVE LEARNT AND PRACTICED + Remember how your brain is converting the test data input to its expected output!
     
       
-      intialise the node named resultnode with value as null
-      initialise the current node and assign back the result node 
+      Initialize the node named resultnode with value as null
+      Initialize the current node and assign back the result node 
       while loop to check both list1 and list2 not null 
       if the value of list1 less than or equal to list2 value than
             current.next value to be list1
@@ -47,20 +47,12 @@ public class MergeTwoSortedLists {
 	 * 
 	 * 11. Check for any gaps of code optimization (if not optimized already in Step #9)
 	 */
-public class ListNode {
-	int val;
-	ListNode next;
-	ListNode resultnode;
-	ListNode(int val, ListNode next,ListNode resultnode) {
-		this.val = val;
-		this.next = next;
-		this.resultnode = resultnode;
-	}
-}
+
 
 public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-	ListNode resultnode = new ListNode(0,null);
+	ListNode resultnode = new ListNode(0, null);
 	ListNode currentnode = resultnode;
+
 	while (list1.next != null && list2.next != null) {
 		if (list1.val <= list2.val) {
 			currentnode.next = list1;
@@ -70,6 +62,5 @@ public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 	return resultnode;
 
 }
-
 
 }

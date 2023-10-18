@@ -10,7 +10,7 @@ public class First_Unique_Character_String {
 	/*
 	 * I/P - String O/P - int
 	 * 
-	 * TC - O(2N) SC - O(N) 
+	 * TC - O(2N) -> O(N) SC - O(N) 
 	 * 
 	 * Pseudo code 
 	

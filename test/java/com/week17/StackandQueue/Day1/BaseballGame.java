@@ -13,7 +13,7 @@ public class BaseballGame {
 	 * input - String[]
 	 * output - int
 	 * 
-	 * TC - O(2N) SC - O(N)
+	 * TC - O(2N)  --> O(N) SC - O(N)
 	 * 
 	 * Pseudo code:
 	 * Initialize Stack Data type to store each String 
@@ -29,6 +29,8 @@ public class BaseballGame {
 	 *  add elements from the output array 
 	 *  return sum value  
 	 * */
+	
+	
 	@Test
 	public void validtestcase() {
  	int actual = calPoints(new String[] { "5", "2", "C", "D", "+" });

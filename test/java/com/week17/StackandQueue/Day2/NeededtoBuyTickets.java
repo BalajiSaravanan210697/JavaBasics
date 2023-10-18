@@ -1,5 +1,7 @@
 package com.week17.StackandQueue.Day2;
 
+import org.junit.Test;
+
 public class NeededtoBuyTickets {
 
 	
@@ -17,8 +19,24 @@ public class NeededtoBuyTickets {
      else increment the counter                                   //
      return counter                                               //
 	 * */
-	
-	 public int timeRequiredToBuy(int[] tickets, int k) {
+	@Test
+	public void validtestcase() {
+		timeRequiredToBuy(new int[] { 2, 3, 2 }, 2);
+	}
 
-	    }
+	public int timeRequiredToBuy(int[] tickets, int k) {
+
+		int count = 0;
+
+		while (tickets[k] != 0) {
+			for (int i = 0; i < tickets.length; i++) {
+				if (tickets[i] > 0) {
+					tickets[i] = tickets[i] - 1;
+					count++;
+				}
+			}
+		}
+		return count;
+
+	}
 }

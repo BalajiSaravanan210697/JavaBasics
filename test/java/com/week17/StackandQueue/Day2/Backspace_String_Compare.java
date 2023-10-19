@@ -42,6 +42,7 @@ public class Backspace_String_Compare {
 	}
 	public boolean backspaceCompare(String s, String t) {
 		// Intialise two stack for store String s and String t
+		
 		Stack<Character> stack1 = new Stack<>();
 		Stack<Character> stack2 = new Stack<>();
         // foreach loop to iterate the each charaxcter from String s

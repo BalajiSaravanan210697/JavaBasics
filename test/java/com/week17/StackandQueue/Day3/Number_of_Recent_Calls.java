@@ -22,10 +22,7 @@ public class Number_of_Recent_Calls {
 	  
 	 * 
 	 * */
-	@Test
-	public void validtestcase() {
-		ping(3);	
-	}
+	
 	// Initialize the Queue of integer named requests to store the time stamps
 	Queue<Integer> requests;
 

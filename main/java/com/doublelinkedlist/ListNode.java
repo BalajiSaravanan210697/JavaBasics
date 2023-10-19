@@ -16,7 +16,7 @@ public class ListNode {
  and assign the tail as new node	*/
 	
 	int value;
-	ListNode next;
+	public ListNode next;
 	ListNode previous;
 
 	public ListNode(int value) {

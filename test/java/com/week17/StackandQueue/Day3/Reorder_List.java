@@ -1,5 +1,8 @@
 package com.week17.StackandQueue.Day3;
 
+import org.junit.Test;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 import com.doublelinkedlist.ListNode;
 
 public class Reorder_List {
@@ -9,11 +12,11 @@ public class Reorder_List {
 	/*
 	 * I/P - ListNode O/P - ListNode
 	 * 
-	 * TC -  SC - 
+	 * TC - O(N)  SC - O(N)
 	 * 
 	 pesuodcode : 
 	 
-	 Initialise ListNode slow and fast to find the middle of the linkedlist
+	 Initialize ListNode slow and fast to find the middle of the linkedlist
 	 while loop to iterate till the fast pointer not null and fast pointer next in not null 
 	 slow pointer assigned as head.next and fast node assigned as head.next.next
 	 split the list using middle pointer (slow) and disconnect fisrt half
@@ -49,7 +52,13 @@ public class Reorder_List {
 		}
 
 	}
-
+ @Test
+  public void main() {
+	ChromeDriver driver = new ChromeDriver();
+	driver.get("https://www.amazon.in/Usha-ICY-400mm-Pedestal-White/dp/B085G717XG/ref=sr_1_4?keywords=pedestal%2Bfans&qid=1694692557&s=kitchen&sr=1-4&th=1");
+	
+  }
+	
 	ListNode reverseList(ListNode head) {
 		ListNode prev = null;
 		ListNode current = head;

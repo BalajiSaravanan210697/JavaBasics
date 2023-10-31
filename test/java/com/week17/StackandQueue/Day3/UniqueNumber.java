@@ -23,7 +23,7 @@ public class UniqueNumber {
 	 * */
 	@Test
 	public void test() {
-		Assert.assertEquals(true, isUnique(new int[] {1,2,2,1,1,3}));
+		Assert.assertEquals(true,isUnique(new int[] {1,2,2,1,1,3}));
 	}
 	@Test
 	public void test1() {

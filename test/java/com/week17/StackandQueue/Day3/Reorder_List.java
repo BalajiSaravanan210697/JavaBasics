@@ -30,7 +30,7 @@ public class Reorder_List {
 		this.val = val;
 		this.next = next;
 	}
-
+  
 	public void reorderList(ListNode head) {
 		ListNode slow = head;
 		ListNode fast = head;
@@ -52,13 +52,7 @@ public class Reorder_List {
 		}
 
 	}
- @Test
-  public void main() {
-	ChromeDriver driver = new ChromeDriver();
-	driver.get("https://www.amazon.in/Usha-ICY-400mm-Pedestal-White/dp/B085G717XG/ref=sr_1_4?keywords=pedestal%2Bfans&qid=1694692557&s=kitchen&sr=1-4&th=1");
-	
-  }
-	
+ 
 	ListNode reverseList(ListNode head) {
 		ListNode prev = null;
 		ListNode current = head;

@@ -1,4 +1,4 @@
-package week19.Day2;
+package com.week19.Day2;
 
 import java.util.HashMap;
 
@@ -31,6 +31,8 @@ public class First_UniQue_Character_inString {
 	
 	
 	Approaches - HashSet
+	
+	
 	 */
 	@Test
 	public void testcase() {

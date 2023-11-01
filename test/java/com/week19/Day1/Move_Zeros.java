@@ -115,14 +115,12 @@ public class Move_Zeros {
 	}
 	
 	public int[] moveZeros(int[] nums) {
-		int temp = 0;
 		if(nums.length==1) return nums;
 		for (int i = 0; i < nums.length; i++) {
 			for (int j = i + 1; j < nums.length; j++) {
 				if (nums[i] == 0 && nums[j] != 0) {
-					temp = nums[i];
 					nums[i] = nums[j];
-					nums[j] = temp;
+					nums[j] = 0;
 				}
 			}
 		}
@@ -139,14 +137,13 @@ public class Move_Zeros {
 	
 	public int[] moveZerostwoPointer(int[] nums) {
 
-		int left = 0, right = 1, temp = 0;
+		int left = 0, right = 1;
 		if(nums.length==1) return nums;
 		while (right < nums.length) {
           //temp varaible is not required & BiDirectional two pointer approach
 			if (nums[left] == 0 && nums[right] != 0) {
-				temp = nums[left];
 				nums[left++] = nums[right];
-				nums[right++] = temp;
+				nums[right++] = 0;
 
 			} else if (nums[left] == 0 && nums[right] == 0) {
 				right++;

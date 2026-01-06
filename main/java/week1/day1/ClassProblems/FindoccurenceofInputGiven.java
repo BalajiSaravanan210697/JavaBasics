@@ -50,6 +50,7 @@ public class FindoccurenceofInputGiven {
 	@Test
 	public void test() {
 		int actual=Findoccurenceofinput(new int[] {1, 1, 2, 2, 2, 2, 3},2);
+		System.out.println(actual);
 		Assert.assertEquals(4, actual);
 	}
 	@Test

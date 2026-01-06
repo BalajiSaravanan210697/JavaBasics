@@ -51,6 +51,7 @@ public class FillingCoins {
 		int actual = FindRowCount(6);
 		Assert.assertEquals(3, actual);
 	}
+
 	
 	public int FindRowCount(int n) {
 		int count=0; // Completed rows

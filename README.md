@@ -77,19 +77,6 @@ This repository bridges the gap between **testing expertise** and **strong progr
 Problems are grouped by **topic and pattern** for easier understanding and revision.
 
 ---
-leetcode-java/
-│
-├── arrays/
-├── strings/
-├── stack/
-├── queue/
-├── two-pointer/
-├── sliding-window/
-├── sorting/
-└── README.md
-
-
----
 
 ## 🧠 Problem-Solving Approach
 
@@ -140,6 +127,4 @@ This repository supports both **daily learning** and **QA / SDET interview prepa
 - Inspired by common **interview-focused DSA patterns**
 - Maintained as part of continuous learning and skill growth
 
-
-## 📂 Repository Structure
 
